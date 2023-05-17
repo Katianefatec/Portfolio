@@ -15,9 +15,5 @@ def experiencia():
 def sobremim():
     return render_template('sobremim.html') 
 
-@app.route('/teste')
-def teste():
-    return render_template('teste.html') 
-
 if __name__ == '__main__':  
     app.run('0.0.0.0')        
