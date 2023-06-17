@@ -1,33 +1,25 @@
 
 {% extends 'base.html' %}
 {% block conteudo %}
-<br>
-<br>
-<br>
 
 <body>
-    <!-- <div class="capa">
-        <img src="../static/img/eu.jpg" alt=eu max-widht="10%" height="200px">
-    </div> -->
-    
-        <!-- Repita o código acima para criar as outras cinco colunas -->
     <div>
         <h1 class="texto-esquerda"> Olá, sou Katiane Soares </h1> 
     </div>
          
       <div class="coluna">
-        <img srcset="../static/img/eu200.jpg, static/img/eu500.jpg 500w" alt="eu" style="width: 25vw;"
-        sizes="(max-width: 600px) 150px, 400px">
+        <a class="img-eu">
+            <img src="../static/img/eu.jpeg" alt="eu"></a>
         
         <h1>Estudante de Desenvolvimento de Software Multiplataforma e curiosa por natureza</h1>
       </div>
 
-    <div>
+    <!-- <div>
         <div class="img-dir">
         <img srcset="../static/img/imagemhome200.jpg, static/img/imagemhome500.jpg 500w" alt="imagemhome" style="width: 40vw;"
         sizes="(max-width: 600px) 250px, 400px">
     </div>   
-    </div>   
+    </div>    -->
    
 </body>
 {% endblock %}

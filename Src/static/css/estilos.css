@@ -5,33 +5,51 @@ body
     max-width: 90%;
     margin:auto;
 }
+footer {
+    position: static;
+    text-align: center;
+    line-height: 20px;
+    color:black;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+  }
+
 
 h1 {
-    color:black;
+    color:rgb(59, 31, 45);
+    font-size: 30px;
     text-align: center;
 }
 
 h2 {    
-    color:black;
+    color:rgb(59, 31, 45);
     text-align: center;
     }
 
 h3 {   
-    color:black;
+    color:rgb(59, 31, 45);
     text-align: center;
     }
 .texto-esquerda {
-    text-align: left;
-    margin-left: 10px;
-    }
-p {
-    width:90%;
+    color:rgb(59, 31, 45);
+    font-size: 40px;
+    text-align: right;
+    width: 32vw;
     }
 
-.capa{ 
-    max-width: 30%;
-    border-radius: 20px;
-    }    
+.texto-direita {
+    color:rgb(59, 31, 45);
+    font-size: 25px;
+    text-align: center;
+    width: 50vw;
+    height:60%;   
+  }
+p {
+    color:rgb(59, 31, 45);
+    font-size: 20px;
+    }
 
 hr { 
     margin-right:120px;
@@ -44,32 +62,42 @@ img {
     width: 300px;
 }
 
+.img-eu{
+    max-width: 30%;
+    border-radius: 20px;
+    }   
+    /* display: block;
+    width: 100vw;
+    height:25vw; */
+}
 .img-dir{
     display: block;
-    width: 160%;
+    width: 130VW;
+    height:10%;
 }
 
 .img-esq{
     display: block;
-    width: 160%;
+    width: 40%;
+    height:90%;
 }
 
 .img-baixo{
     display: block;
-    width: 100%;
+    width: 130%;
+    height:90%;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     }
       
 .navbar a {
-    color: white;
+    color:rgb(59, 31, 45);
     text-align: center;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 22px;
     padding: 10px;
     }
       
@@ -77,7 +105,8 @@ img {
     order: -1;
     margin-right: auto;
     }
-      
+
+
 @media screen and (max-width: 600px) {
     .navbar {
         flex-wrap: wrap;
@@ -98,26 +127,26 @@ img {
         }
       } 
 
-      .colunas-container {
+    .colunas-container {
         display: flex;
         flex-wrap: wrap;
       }
     
-      .coluna {
-        flex-basis: 50%;
+    .coluna {
+        flex-basis: 100%;
         box-sizing: border-box;
         padding: 10px;
         display: flex;
         align-items: center;
       }
     
-      .coluna img {
-        width: 50%;
+    .coluna img {
+        width: 70%;
         height: auto;
         margin-right: 15px;
       }
     
-      .coluna p {
+    .coluna p {
         margin: 0px;
       }
     
