@@ -1,12 +1,9 @@
     
 body 
 {
-    background: rgb(15, 62, 82);
     background: linear-gradient(180deg, rgba(15, 62, 82, 0.77), rgba(96, 167, 197, 0) 80%);
     max-width: 90%;
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-left: 50px;
+    margin:auto;
 }
 
 h1 {
@@ -16,8 +13,6 @@ h1 {
 
 h2 {    
     color:black;
-    margin-right:20px;
-    margin-left: 20px;
     text-align: center;
     }
 
@@ -51,7 +46,17 @@ img {
 
 .img-dir{
     display: block;
-    margin-left: 700px;
+    width: 160%;
+}
+
+.img-esq{
+    display: block;
+    width: 160%;
+}
+
+.img-baixo{
+    display: block;
+    width: 100%;
 }
 .navbar {
     display: flex;
