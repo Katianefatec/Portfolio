@@ -41,7 +41,7 @@ h3 {
 
 .texto-direita {
     color:rgb(59, 31, 45);
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     width: 50vw;
     height:60%;   
@@ -117,10 +117,7 @@ img {
     max-width: 30%;
     border-radius: 20px;
     }   
-    /* display: block;
-    width: 100vw;
-    height:25vw; }*/
-
+    
 .img-dir{
     display: block;
     width: 120vw;
@@ -142,6 +139,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -80px;
+    margin-bottom: -100px;
     }
       
 .navbar a {
@@ -151,6 +150,15 @@ img {
     font-size: 22px;
     padding: 10px;
     }
+
+.divider {
+        border-top: 1px solid rgb(26, 10, 18); 
+      }
+
+.divider2 {
+        border-top: 1px solid rgb(26, 10, 18); 
+        margin-top: 60px;
+      }
       
 .logo {
     order: -1;
@@ -161,28 +169,32 @@ img {
 
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 20px;
+        font-size: 30px;
         text-align: center;
     }
     .texto-esquerda {
         font-size: 25px;
         text-align: left;
         width: 70vw;
+        margin-top: -70px;
         }
     .navbar {
         flex-wrap:wrap;
+        margin-bottom: 30%;
+        margin-top: -60px;
         }
         
     .navbar a:not(.logo) {
         order: -1;
         margin-right: 10px;
-        margin-bottom: 10px;
+        margin-bottom: -150px;
+        margin-top: -300px;
         }
         
     .navbar a.logo {
         /* order: 1; */
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         width: 100%;
         text-align: center;
         }
@@ -197,7 +209,7 @@ img {
         margin-bottom: 10px;
       } 
     .texto-direita {
-        font-size: 20px;
+        font-size: 25px;
         text-align: center;
         width: 85vw;
            
@@ -228,6 +240,15 @@ img {
         margin-right: 143px;
         margin-bottom: 10px;
             }
+    
+    .divider {
+                border-top: 0px solid rgb(26, 10, 18); 
+              }
+        
+    .divider2 {
+                border-top: 0px solid rgb(26, 10, 18); 
+                
+              }
     }
 
     
