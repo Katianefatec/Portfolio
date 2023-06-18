@@ -48,10 +48,13 @@ venv\Scripts\activate
 
 ```
 pip install -r ..\requirements.txt
-```
 
 
-7. Execute o Flask:
+7. Executar a aplicação (na pasta src/)
+
+python app.py
+
+8. Execute o Flask:
 
 ```
 flask run
