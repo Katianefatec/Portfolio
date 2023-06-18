@@ -49,27 +49,35 @@ venv\Scripts\activate
 ```
 pip install -r ..\requirements.txt
 
-
+...
 7. Executar a aplicação (na pasta src/)
-
+...
 python app.py
+...
 
 8. Clique no endereço de IP que será gerado para abrir o site no navegador:
 
 ```
 Ctrl+Clique para seguir o link
-```
 
 Caso ocorram erros durante a execução do projeto, verifique se os passos acima foram seguidos corretamente e se todas as dependências estão instaladas corretamente.
 
-Instruções para a implantação no Vercel
+...
 
-   1. Instalar o node e seu gerenciador de pacotes, ou seja, o npm
-   2. Instalar o vercel através do comando:
-      npm install -g vercel 
+## Instruções para a implantação no Vercel
 
-   3. Considerando que você já criou uma conta no Vercel, e que está logado, utilize o comando seguinte no mesmo nível do arquivo vercel.json
-      vercel
-   4. Defina um nome para a sua aplicação e utilize todas as demais opções de acordo com o padrão sugerido.
-   5. Verifique se o link disponibilizado ao final do processo de upload/build está acessível, caso não esteja, execute o comando
-      vercel --prod 
+1. Instalar o node e seu gerenciador de pacotes, ou seja, o npm 
+2. Instalar o vercel através do comando: 
+    ```console 
+    npm install -g vercel 
+    ```
+3. Considerando que você já criou uma conta no Vercel, e que
+ está logado, utilize o comando seguinte no mesmo nível do arquivo vercel.json
+    ```console 
+    vercel
+    ```
+4. Defina um nome para a sua aplicação e utilize todas as demais opções de acordo com o padrão sugerido. 
+5. Verifique se o link disponibilizado ao final do processo de upload/build está acessível, caso não esteja, execute o comando 
+    ```console 
+    vercel --prod 
+    ```
