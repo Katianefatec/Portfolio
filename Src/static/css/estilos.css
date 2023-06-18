@@ -331,7 +331,8 @@ img {
         
   .img-esq{
       width: 70VW;
-      margin-left: 50px;
+      /* margin-left: 20px; */
+      margin-right: 9px;
       margin-bottom: 10px;
     } 
   .texto-direita {
