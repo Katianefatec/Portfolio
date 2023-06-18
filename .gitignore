@@ -1,8 +1,4 @@
 .idea/
 venv/
 *.pyc
-<<<<<<< HEAD
-
-=======
->>>>>>> dd8c10460713966d2b2e079fafdf35d534bc0a94
 .vercel
