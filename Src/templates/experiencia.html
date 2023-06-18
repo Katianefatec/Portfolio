@@ -5,6 +5,26 @@
 <br>
 <br>
 <div class="colunas-exp-container">
+  <div class="coluna-exp">
+      {% for experiencia in experiencias %}
+      <div class="experiencia">
+        <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}">
+        <h2>{{ experiencia.titulo }}</h2>
+      </div>
+      {% endfor %}
+  </div>
+  <div class="coluna-exp">
+    {% for experiencia in experiencias2 %}
+    <div class="experiencia2">
+        <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}">
+        <h2>{{ experiencia.titulo }}</h2>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<!-- <div class="colunas-exp-container">
     <div class="coluna-exp">
       <div class="experiencia">
         <img src="../static/img/fisio.jpg" alt="formacao">
@@ -39,7 +59,7 @@
       </div>
     
     </div>
-  </div>
+  </div> -->
   
 
 
