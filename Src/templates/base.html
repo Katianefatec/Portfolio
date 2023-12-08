@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/normalize.css">
     <link rel="stylesheet" href="../static/css/estilos.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Akshar:wght@400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+
 </head>
-<div class="navbar">
-  <a class="logo" href="#"><img src="../static/img/ks.png" alt="Logo"></a>
-  <a href="/">Home</a>
-  <a href="/experiencia">Experiência</a>
-  <a href="/sobremim">Sobre mim</a>
-</div>
-</head>
-<div class="divider"></div>
 <body>
-                      
-{% block conteudo %}
-{% endblock %}     
-
-<div class="divider2"></div>
-
-<footer>
-  <div>
-  Todos os direitos reservados
+  
+  
 </div>
-<div class="name">
-  <div class="img-footer">
-    <a href="https://github.com/Katianefatec">
-      <img src="../static/img/git.png" alt="GitHub">
-    </a>
+  <div class="sidebar-fixed">
+    <div class="container-fluid">
+      <d class="row">
+        <nav id="sidebar">     
+          <button class="menu-btn d-lg-none">Menu</button>     
+                     
+          <div class="list-unstyled components">
+            <img src="../static/img/ks.png" alt="Logo"> 
+            <a href="/">Home</a>
+            <a href="/experiencia">Experiência</a>
+            <a href="/projetos">Projetos</a>
+            <a href="/sobremim">Sobre mim</a>            
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
-  <span>Katiane Soares</span>
-</div>
 
-<!-- <div class="name">
-  <div class="img-footer">
-    <a href="https://github.com/Katianefatec">
-      <img src="../static/img/git.png" alt="GitHub"></a>
-    <span>Katiane Soares</span>
-  </div> -->
-</footer>
+  {% block conteudo %}
+  {% endblock %}     
+
+  <div class="divider2"></div>
+
+  <footer>
+    <div>
+      <span>&copy; Katiane Soares</span>
+      <div class="img-footer">
+        <a href="https://github.com/Katianefatec" class="fab fa-github" style="color: black;"></a>
+        <a href="https://www.linkedin.com/in/katiane-soares-4b8193245/" class="fab fa-linkedin" style="color: black;"></a>
+      </div>  
+    </div>
+  </footer>
+  <script>
+    document.querySelector('.menu-btn').addEventListener('click', function() {
+        document.querySelector('#sidebar').classList.toggle('active');
+        document.querySelector('.overlay').classList.toggle('active');
+    });
+</script>
 
 </body>               
 

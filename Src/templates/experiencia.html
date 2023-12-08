@@ -1,66 +1,34 @@
 {% extends "base.html" %}
 {% block conteudo %}
-<h1>Experiência Profissional</h1>
-<br>
-<br>
-<br>
-<div class="colunas-exp-container">
-  <div class="coluna-exp">
-      {% for experiencia in experiencias %}
-      <div class="experiencia">
-        <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}">
-        <h2>{{ experiencia.titulo }}</h2>
+
+<div class="container-sobre">
+
+  <h1>Experiência </h1>
+
+  <hr>
+  <br>
+  <br>
+  <div class="colunas-exp-container">
+    <div class="coluna-exp">
+        {% for experiencia in experiencias %}
+        <div class="experiencia">
+          <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}">
+          <h2>{{ experiencia.titulo }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="coluna-exp">
+      {% for experiencia in experiencias2 %}
+      <div class="experiencia2">
+          <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}">
+          <h2>{{ experiencia.titulo }}</h2>
       </div>
       {% endfor %}
-  </div>
-  <div class="coluna-exp">
-    {% for experiencia in experiencias2 %}
-    <div class="experiencia2">
-        <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}">
-        <h2>{{ experiencia.titulo }}</h2>
     </div>
-    {% endfor %}
   </div>
 </div>
 
 
-<!-- <div class="colunas-exp-container">
-    <div class="coluna-exp">
-      <div class="experiencia">
-        <img src="../static/img/fisio.jpg" alt="formacao">
-        <h2>Formada em fisioterapia pela FCT - UNESP (2001-2004)</h2>
-      </div>
-           
-      <div class="experiencia">
-        <img src="../static/img/faculeste.jpeg" alt="cargo2">
-        <h2>Pós-graduada em Intervenção psicológica na mediação e resolução de conflitos (2022-2023)</h2>
-      </div>
-
-      <div class="experiencia">
-        <img src="../static/img/fatec.jpeg" alt="cargo5">
-        <h2>Cursando Desenvolvimento de Software Multiplataforma</h2>
-      </div>
-    </div>
-    
-    <div class="coluna-exp">
-      <div class="experiencia2">
-        <img src="../static/img/nossacaixa.png" alt="cargo3">
-        <h2>Auxiliar administrativo do Banco Nossa Caixa (2006-2007)</h2>
-      </div>
-
-      <div class="experiencia2">
-        <img src="../static/img/tjsp.jpg" alt="cargo1">
-        <h2>Escrevente técnica do Tribunal de Justiça do Estado de São Paulo (2007-2009)</h2>
-      </div>
-    
-      <div class="experiencia2">
-        <img src="../static/img/jfsp.jpg" alt="cargo4">
-        <h2>Técnica judiciária da Justiça Federal de São Paulo (2009 até o momento)</h2>
-      </div>
-    
-    </div>
-  </div> -->
-  
 
 
 
