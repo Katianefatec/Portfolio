@@ -1,8 +1,7 @@
     
 body {
   background: linear-gradient(180deg, rgba(15, 62, 82, 0.77), rgba(96, 167, 197, 0) 100%);  
-  margin-left: 20%;
-  margin-top: 8%;
+  margin: 10% 12%;
   min-height: 100vh;
   width: 75%;
 }
@@ -84,7 +83,7 @@ h3 {
     width: 200vw;
     height:50%;
     margin-right: 60px;
-    margin-left: -60px;
+    margin-left: -90px;
     
     
      
@@ -94,21 +93,22 @@ h3 {
     
     /* width: 40%; */
     /* height:200vw; */
-    flex: 0 0 20%;
-    margin-right: 130px;
+    flex: 0 0 40%;
+    margin-top: 20px;
+    /* margin-right: 30px; */
     
    
   }
 
 
 .img-baixo img {
-    width: 170%;
+    width: 100%;
     
     border-radius: 2%;
   }
 
 .img-esq img {
-    width: 45%;
+    width: 60%;
     
     border-radius: 2%;
   }
@@ -129,7 +129,7 @@ h3 {
 .coluna-sobre-baixo {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
   margin-top: 60px;
   
 }  
@@ -148,6 +148,7 @@ img {
 .colunas-container {
     display: flex;
     flex-wrap: wrap;
+  
   }
 
 .coluna {
@@ -161,10 +162,11 @@ img {
 
 .colunas-exp-container{
     display: flex;
-    
+    flex-direction: column;     
     margin-right: 20px;
 }
 .coluna-exp {
+  
     flex-basis:50%;
     margin-left: 0px;
     
@@ -182,14 +184,36 @@ img {
   }
 
 .experiencia {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: 5px;
   }
 
-.experiencia img {
-    margin-right: 15px;
-  }
+.coluna-exp .experiencia{
+  justify-content: flex-start;
+  
+
+}
+
+.coluna-exp .experiencia img {
+  height: 8vw;
+  width: 10vw; 
+  margin-right: 20px;
+}
+
+.coluna-exp .experiencia2{
+  justify-content: flex-start;
+  
+
+}
+
+.coluna-exp .experiencia2 img {
+  height: 8vw;
+  width: 10vw; 
+  margin-right: 20px;
+}
 .experiencia2 {
     display: flex;
     align-items: center;
@@ -228,11 +252,15 @@ img {
 }
 
 
-.img-baixo{
+/* .img-baixo{
     display: block;
     width: 120%;
     height:80%;
 }
+
+img-baixo img{
+  
+} */
 
 
 .divider {
@@ -253,6 +281,7 @@ img {
     } */ */
 
 .projeto {
+      border: 1px solid #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -262,6 +291,10 @@ img {
   }
 
 .projeto2 {
+    border: 1px solid #000;
+    background-color: rgba(238, 242, 243, 0.77); 
+    padding: 20px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,41 +331,53 @@ img {
     
   }
 .container-sobre {
-  width: 95%;
- 
-  
-  
+  width: 95%;  
+}
+
+.container-exp {
+  width: 95%;  
+  border: 1px solid #000; /* Adiciona uma borda preta */
+  background-color: rgba(238, 242, 243, 0.77); 
+  padding: 20px; /* Adiciona algum espaço interno */
+  margin-bottom: 40px;
+  border-radius: 8px;
 }
 
 #sidebar {
-/* height: 100%; */
-position: fixed;
-top: 0;
-left: 0;
-width: 15%;
-bottom:0;
-overflow: auto;
-background-color: #505055;
-color: white;
-text-align: left;
-
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #2d2d46;
+  color: white;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 
 
 .list-unstyled {
-padding-left: 10px;
+display: flex;
+padding-left: 0px;
 list-style: none;
-margin-bottom: 0;
-
+margin: 0;
+padding: 0;
+flex-grow: 1;
+justify-content: center;
+align-items: center;
 
 }
 
 .list-unstyled a {
 color: white;
 text-decoration: none;
-padding: 8px 30px;
-display: block;
+padding: 0px 15px;
+/* display: block; */
 }
 
 .list-unstyled a:hover {
@@ -341,30 +386,119 @@ background-color: #495057;
 
 .list-unstyled img {
   /* Ajuste esses valores conforme necessário */
-  width: 20vw;
-  height: 20vw;
-  margin-left: -30px;
+  width: 10%;
+  /* height: 10vw; */
+  /* margin-left: -30px; */
+  /* margin-right: auto; */
   
 }
 
 .sidebar-fixed {
-    /* width: 250px; */
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
   }
 
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 10px;
+  z-index: 9999;
+  
+}
+
+#sidebar.active {
+  /* código para exibir o menu lateral */
+  transform: translateX(0);
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+
+  #sidebar {
+    /* position: fixed; */
+    /* top: 0; */
+    flex-direction: column;
+    left: 0;  
+    height: 50px;    
+    /* transition: left 0.5s;  
+     */
+  }
+
+  #sidebar.active {
+    left:0;
+    width: 20%;
+    height: 100%;
+
+  }
+
+  #sidebar.active img{
+    display: none;
     
- 
+
+  }
+
+  
+  #sidebar:not(.active) {
+    width: 100%;  /* Faz a faixa horizontal do menu ocupar toda a largura */
+    height: 50px;  /* Ajuste a altura conforme necessário */
+  }
+
+  #sidebar:not(.active)  img {
+    display: none;  /* Esconde a imagem do logo */
+  }
+
+  #sidebar:not(.active) .list-unstyled a {
+    display: none;  /* Esconde os links quando o menu lateral está inativo */
+  }
+
+  .list-unstyled {
+    flex-direction: column; 
+    /* padding-bottom: 15px; */
+  }
 
   
 
+  .overlay {
+    transition: opacity 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
 
+  .overlay.active {
+    display: block;  /* Mostra o overlay quando a classe .active é adicionada */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Overlay semi-transparente */
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  .hamburger {
+    display: flex;
+  }
+
+  
+}
+    
+ 
 
 @media screen and (max-width: 600px) {
   body {
-    margin-left: 0%;
-    margin-top: 8%;
+    margin-left: 8%;
+    margin-top: 15%;
     min-height: 100vh;
     width: 75%;
   }
@@ -415,12 +549,17 @@ background-color: #495057;
       width: 70vw;
       /* margin-bottom: 10px; */
     } 
+
+.container-exp {
+  margin-top: 10px;
+  border-radius: 5px;
+}
     
 .colunas-exp-container {
       flex-direction: column;
     }
           
-.coluna-exp {
+/* .coluna-exp {
       flex-basis: 100%;
     }
           
@@ -436,8 +575,36 @@ background-color: #495057;
     width: 30vw;
     margin-bottom: 10px;
     margin-right: 45px;
-    }
+    } */
     
+.coluna-exp .experiencia{
+  justify-content:center;
+  flex-direction: column;
+  
+  
+  
+
+}
+
+.coluna-exp .experiencia img {
+  height: 20vw;
+  width: 20vw; 
+  margin-right: 100px;
+}
+
+.coluna-exp .experiencia2{
+  justify-content:center;
+  flex-direction: column;
+  
+  
+
+}
+
+.coluna-exp .experiencia2 img {
+  height: 20vw;
+  width: 20vw; 
+  margin-right: 100px;
+}
       
     
 .divider {
@@ -480,16 +647,17 @@ background-color: #495057;
    
     }
 
-  .img-baixo img {
-      width: 100%;
-      height:30vw;
-      margin-left: 30px;
-      
-      
-      border-radius: 2%;
-    }
+.img-baixo img {
+    width: 100%;
+    height:30vw;
+    margin-left: 30px;
     
-    }
+    
+    border-radius: 2%;
+  }
+
+
+  }
 
 
   
@@ -587,43 +755,7 @@ background-color: #495057;
 
 }
 
-@media (max-width: 768px) {
-  #sidebar {
-    position: fixed;
-    top: 0;
-    left: -100%;  /* Esconde o menu fora da tela */
-    width: 80%;  /* Ajuste a largura do menu conforme necessário */
-    transition: left 0.3s;  /* Animação para deslizar o menu */
-  }
 
-  #sidebar.active {
-    left: 0; 
-  }
-
-  .overlay {
-    transition: opacity 0.3s ease-in-out;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .overlay.active {
-    display: block;  /* Mostra o overlay quando a classe .active é adicionada */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);  /* Overlay semi-transparente */
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
   
 
