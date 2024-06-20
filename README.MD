@@ -57,7 +57,7 @@ Bem-vindo ao meu portfólio de design digital! Este projeto foi desenvolvido com
 6.  **Acesse o portfólio:**
     Abra seu navegador e acesse o endereço exibido no terminal (geralmente `http://127.0.0.1:5000/`).
 
-7. **Link do portfólio:**: https://portifolio1katianesoares.vercel.app/
+7. **Link do portfólio:**: https://portifolio-katiane.vercel.app/
 
 ## 🌐 Implantação no Vercel
 
