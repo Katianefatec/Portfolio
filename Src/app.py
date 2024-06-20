@@ -1,6 +1,10 @@
 from flask import app, Flask, render_template, request, url_for
+from datetime import datetime
 
 app = Flask(__name__)
+
+data_nascimento_usuario = datetime(1981, 12, 3) 
+data_nascimento_filha = datetime(2018, 5, 31)
 
 @app.route('/')
 def home():
@@ -25,8 +29,11 @@ def experiencia():
 
 
 @app.route('/sobremim')
-def sobremim():
-    return render_template('sobremim.html') 
+def sobremim():    
+    idade_usuario = datetime.now().year - data_nascimento_usuario.year - ((datetime.now().month, datetime.now().day) < (data_nascimento_usuario.month, data_nascimento_usuario.day))
+    idade_filha = datetime.now().year - data_nascimento_filha.year - ((datetime.now().month, datetime.now().day) < (data_nascimento_filha.month, data_nascimento_filha.day))
+    
+    return render_template('sobremim.html', idade_usuario=idade_usuario, idade_filha=idade_filha)
 
 @app.route('/projetos')
 def projetos():
