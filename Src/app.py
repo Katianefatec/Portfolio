@@ -25,9 +25,7 @@ def experiencia():
         {"imagem": "../static/img/jfsp.jpg", "alt": "cargo4", "titulo": "Técnica judiciária da Justiça Federal de São Paulo (2009 até o momento)"}
     ]
     return render_template('experiencia.html', experiencias=experiencias, experiencias2=experiencias2)
-
-
-
+  
 @app.route('/sobremim')
 def sobremim():    
     idade_usuario = datetime.now().year - data_nascimento_usuario.year - ((datetime.now().month, datetime.now().day) < (data_nascimento_usuario.month, data_nascimento_usuario.day))
