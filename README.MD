@@ -35,7 +35,7 @@ Bem-vindo ao meu portfólio de design digital! Este projeto foi desenvolvido com
 
 2.  **Acesse a pasta `Src`:**
     ```bash
-    cd Portifolio/Src
+    cd Portfolio/Src
     ```
 
 3.  **Crie e ative o ambiente virtual:**
