@@ -1,24 +1,77 @@
-
 {% extends 'base.html' %}
 {% block conteudo %}
 
-
-<div class="container-sobre">
-  <div>
-    <h1 class="texto-esquerda"> Olá, sou Katiane Soares </h1> 
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="profile-container">
+      <img class="profile-image" src="../static/img/eu500.jpg" alt="Katiane Soares">
+      <div class="profile-info">
+        <h1>Katiane Soares</h1>
+        <h2 class="subtitle">Desenvolvedora Full Stack | Estudante de DSM na FATEC</h2>
+        <p class="bio">Profissional em transição de carreira com formação em Fisioterapia e experiência no setor público, atualmente focada em desenvolvimento de software multiplataforma. Combino pensamento analítico, habilidades de comunicação e resolução de problemas para criar soluções tecnológicas eficazes.</p>
+        <div class="social-links">
+          <a href="https://github.com/Katianefatec" target="_blank" class="social-btn">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/katiane-soares-4b8193245/" target="_blank" class="social-btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-     
-<div class="coluna">
-    <a class="img-eu">
-        <img srcset="../static/img/eu200.jpg, static/img/eu500.jpg 500w" alt="eu" style="width: 25vw;"
-        sizes="(max-width: 600px) 150px, 400px">
-    </a>
-    <a class="texto-direita">Estudante de Desenvolvimento de Software Multiplataforma e curiosa por natureza</a>
 </div>
 
-    
-</div>  
-</br>
-   
-</body>
+<div class="about-section">
+  <div class="about-content">
+    <h2>Sobre mim</h2>
+    <p>Tenho {{ idade_usuario }} anos, nasci em São Paulo e desde 2013 moro em São José dos Campos. Sou casada e tenho uma filha de {{ idade_filha }} anos, que é minha principal motivação para evoluir profissionalmente.</p>
+    <p>Estou em processo de transição de carreira, buscando aplicar minha experiência em resolução de problemas e pensamento analítico no desenvolvimento de software. Atualmente, estou cursando Desenvolvimento de Software Multiplataforma na FATEC.</p>
+    <p>Acredito que estamos em constante evolução, e foi essa busca por crescimento que me trouxe a este novo desafio profissional.</p>
+  </div>
+</div>
+
+<div class="skills-section">
+  <h2>Habilidades</h2>
+  <div class="skills-container">
+    <div class="skill-category">
+      <h3>Frontend</h3>
+      <div class="skill-list">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">TypeScript</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3>Backend</h3>
+      <div class="skill-list">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3>Banco de Dados</h3>
+      <div class="skill-list">
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Supabase</span>
+        <span class="skill-tag">Neon Tech</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3>Ferramentas</h3>
+      <div class="skill-list">
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Jira</span>
+        <span class="skill-tag">Taiga</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
