@@ -6,7 +6,8 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/normalize.css">
-    <link rel="stylesheet" href="../static/css/estilos.css"> 
+    <link rel="stylesheet" href="../static/css/estilos.css">     
+    <link rel="stylesheet" href="../static/css/vercel.css?v=1.1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Katiane Soares | Desenvolvedora Full Stack</title>
@@ -32,22 +33,22 @@
   </div>
   
   <!-- Menu mobile em tabs -->
-  <nav class="mobile-tab-menu">
-    <a href="/" class="tab-item {% if request.path == '/' %}active{% endif %}">
-      <i class="fas fa-home mobile-icon"></i>
-      <span class="mobile-text">Home</span>
+    <nav class="mobile-tab-menu">
+    <a href="/" class="tab-item vercel-tab-item {% if request.path == '/' %}active{% endif %}">
+      <i class="fas fa-home vercel-icon"></i>
+      <span class="vercel-text">Home</span>
     </a>
-    <a href="/experiencia" class="tab-item {% if request.path == '/experiencia' %}active{% endif %}">
-      <i class="fas fa-briefcase"></i>
-      <span>Experiência</span>
+    <a href="/experiencia" class="tab-item vercel-tab-item {% if request.path == '/experiencia' %}active{% endif %}">
+      <i class="fas fa-briefcase vercel-icon"></i>
+      <span class="vercel-text">Experiência</span>
     </a>
-    <a href="/projetos" class="tab-item {% if request.path == '/projetos' %}active{% endif %}">
-      <i class="fas fa-code"></i>
-      <span>Projetos</span>
+    <a href="/projetos" class="tab-item vercel-tab-item {% if request.path == '/projetos' %}active{% endif %}">
+      <i class="fas fa-code vercel-icon"></i>
+      <span class="vercel-text">Projetos</span>
     </a>
-    <a href="https://github.com/Katianefatec" class="tab-item" target="_blank">
-      <i class="fab fa-github"></i>
-      <span>GitHub</span>
+    <a href="https://github.com/Katianefatec" class="tab-item vercel-tab-item" target="_blank">
+      <i class="fab fa-github vercel-icon"></i>
+      <span class="vercel-text">GitHub</span>
     </a>
   </nav>
 
@@ -61,32 +62,88 @@
   </footer>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    
-    document.addEventListener("DOMContentLoaded", function() {
-      function adjustMenus() {
-        const isMobile = window.innerWidth <= 768;
-        
-        // Forçar exibição correta independente das media queries CSS
-        document.querySelector('.desktop-menu').style.display = isMobile ? 'none' : 'block';
-        document.querySelector('.mobile-tab-menu').style.display = isMobile ? 'flex' : 'none';
-        
-        // No desktop, esconda todos os ícones mobile
-        if (!isMobile) {
-          document.querySelectorAll('.mobile-icon, .mobile-text').forEach(el => {
-            if (window.innerWidth > 768) {
-              el.style.display = 'none';
-            }
-          });
+        <script>
+      // Script específico para resolver problemas no Vercel e em desenvolvimento
+      (function() {
+        // Função para detectar ambiente Vercel
+        function isVercelEnv() {
+          return window.location.hostname.includes('vercel') || 
+                 window.location.hostname.includes('.app') ||
+                 window.location.hostname !== 'localhost';
         }
-      }
-      
-      // Executar imediatamente
-      adjustMenus();
-      
-      // Executar ao redimensionar
-      window.addEventListener('resize', adjustMenus);
-    });
-  </script>
+        
+        // Aplicar estilos inline para resolver problema no Vercel
+        function applyVercelFix() {
+          if (isVercelEnv()) {
+            var style = document.createElement('style');
+            style.innerHTML = `
+              @media (max-width: 768px) {
+                .mobile-tab-menu {
+                  display: flex !important;
+                  position: fixed !important;
+                  bottom: 0 !important;
+                  left: 0 !important;
+                  width: 100% !important;
+                  height: 60px !important;
+                  background-color: #2d3e50 !important;
+                  z-index: 1000 !important;
+                  justify-content: space-around !important;
+                }
+                .tab-item {
+                  flex: 1 !important;
+                  display: flex !important;
+                  flex-direction: column !important;
+                  align-items: center !important;
+                  justify-content: center !important;
+                }
+                .tab-item i {
+                  display: block !important;
+                  font-size: 20px !important;
+                }
+                .tab-item span {
+                  display: block !important;
+                  font-size: 12px !important;
+                }
+              }
+            `;
+            document.head.appendChild(style);
+          }
+        }
+    
+        // Função para ajustar menus
+        function adjustMenus() {
+          const isMobile = window.innerWidth <= 768;
+          
+          const desktopMenu = document.querySelector('.desktop-menu');
+          const mobileMenu = document.querySelector('.mobile-tab-menu');
+          
+          if (desktopMenu && mobileMenu) {
+            // Forçar exibição correta
+            desktopMenu.style.display = isMobile ? 'none' : 'block';
+            mobileMenu.style.display = isMobile ? 'flex' : 'none';
+            
+            // Ajustes de estilo para mobile
+            if (isMobile) {
+              mobileMenu.style.justifyContent = 'space-around';
+              mobileMenu.style.alignItems = 'center';
+            }
+          }
+        }
+        
+        // Executar assim que possível
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            applyVercelFix();
+            adjustMenus();
+          });
+        } else {
+          applyVercelFix();
+          adjustMenus();
+        }
+        
+        // Executar ao redimensionar
+        window.addEventListener('resize', adjustMenus);
+      })();
+    </script>
 </body>
 </html>
