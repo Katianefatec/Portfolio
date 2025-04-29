@@ -52,6 +52,11 @@
     color: white !important;
   }
 
+  #sidebar img {
+    width: 200px;
+    height: auto;
+  }
+
 /* Media queries forçadas com !important */
 @media screen and (max-width: 768px) {
   .desktop-menu {
