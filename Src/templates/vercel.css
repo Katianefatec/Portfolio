@@ -19,24 +19,38 @@
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255,255,255,0.7);
   text-decoration: none !important;
   padding: 8px 0 !important;
   flex: 1 !important;
   text-align: center !important;
 }
 
-.tab-item i {
+.tab-item i,
+.vercel-icon,
+.tab-item .fas,
+.tab-item .fab {
   font-size: 20px !important;
   margin-bottom: 3px !important;
-  display: block !important; /* Forçar exibição do ícone */
+  display: block !important;
+  color: white !important; /* Forçar ícones brancos */
 }
 
 .tab-item span {
   font-size: 12px !important;
   font-weight: 500 !important;
-  display: block !important; /* Forçar exibição do texto */
+  display: block !important; 
+  color: white !important;
 }
+
+.tab-item.active {
+    color: white !important;
+  }
+  
+  .tab-item.active i,
+  .tab-item.active span {
+    color: white !important;
+  }
 
 /* Media queries forçadas com !important */
 @media screen and (max-width: 768px) {
@@ -56,4 +70,5 @@
   .content-wrapper {
     padding-bottom: 80px !important;
   }
+  
 }
