@@ -13,7 +13,7 @@ def home():
     return render_template('index.html', idade_usuario=idade_usuario, idade_filha=idade_filha)
 
 @app.route('/experiencia')
-def experiencia():
+def experiencia(): 
     experiencias = [
         {"imagem": "../static/img/fatec.jpeg", "alt": "cargo5", "titulo": "Cursando Desenvolvimento de Software Multiplataforma"},
         {"imagem": "../static/img/faculeste.jpeg", "alt": "cargo2", "titulo": "Pós-graduada em Intervenção psicológica na mediação e resolução de conflitos (2022-2023)"},
