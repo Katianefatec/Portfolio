@@ -17,10 +17,10 @@
     <nav id="sidebar">
       <img src="../static/img/ks.png" alt="Logo">
       <ul class="list-unstyled">
-        <li><a href="/">Home</a></li>
-        <li><a href="/experiencia">Experiência</a></li>
-        <li><a href="/projetos">Projetos</a></li>
-        <li><a href="https://github.com/Katianefatec" target="_blank">GitHub</a></li>
+        <li><a href="/" class="desktop-link">Home</a></li>
+        <li><a href="/experiencia" class="desktop-link">Experiência</a></li>
+        <li><a href="/projetos" class="desktop-link">Projetos</a></li>
+        <li><a href="https://github.com/Katianefatec" target="_blank" class="desktop-link">GitHub</a></li>
       </ul>
     </nav>
   </div>
@@ -34,8 +34,8 @@
   <!-- Menu mobile em tabs -->
   <nav class="mobile-tab-menu">
     <a href="/" class="tab-item {% if request.path == '/' %}active{% endif %}">
-      <i class="fas fa-home"></i>
-      <span>Home</span>
+      <i class="fas fa-home mobile-icon"></i>
+      <span class="mobile-text">Home</span>
     </a>
     <a href="/experiencia" class="tab-item {% if request.path == '/experiencia' %}active{% endif %}">
       <i class="fas fa-briefcase"></i>

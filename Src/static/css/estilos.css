@@ -82,12 +82,8 @@
     }
     
     /* Menu Desktop vs Mobile */
-    .mobile-tab-menu {
-      display: none; /* Oculto por padrão */
-    }
-    
-    .desktop-menu {
-      display: block; /* Visível por padrão */
+    .mobile-tab-menu, .desktop-menu {
+      display: none !important; /* Esconder ambos por padrão */
     }
     
     /* Estilo do Tab Menu Mobile */
@@ -588,7 +584,39 @@
     footer .img-footer img:hover {
       transform: scale(1.2);
     }
-    
+    /* Regras globais para fixar o comportamento no Vercel */
+.mobile-tab-menu, .desktop-menu {
+  display: none !important; /* Esconder ambos por padrão */
+}
+
+/* Regras específicas para desktop */
+@media screen and (min-width: 769px) {
+  .desktop-menu {
+    display: block !important;
+  }
+  
+  .mobile-tab-menu {
+    display: none !important;
+  }
+}
+
+/* Regras específicas para mobile */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-tab-menu {
+    display: flex !important;
+  }
+}
+
+    /* Corrigir problema de ícones no desktop */
+    @media screen and (min-width: 769px) { 
+      .tab-item i {
+        display: none !important;
+      }
+    }
     /* Media Queries */
     @media (max-width: 768px) {
       /* Alternar menus */
