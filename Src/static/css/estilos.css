@@ -168,7 +168,7 @@
       height: 200px;
       border-radius: 50%;
       object-fit:cover;
-      object-position:10% 15%;
+      object-position:10% 15% !important;
       border: 4px solid #fff;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       margin: 0 auto;
@@ -647,6 +647,8 @@
       
       .profile-image {
         margin-bottom: 20px;
+        object-position:10% 15%;
+
       }
       
       .social-links {
@@ -694,6 +696,7 @@
       .profile-image {
         width: 150px;
         height: 150px;
+        object-position:10% 15% !important;
       }
       
       .social-btn {
