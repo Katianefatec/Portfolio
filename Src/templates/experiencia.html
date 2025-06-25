@@ -1,29 +1,34 @@
-{% extends "base.html" %}
-{% block conteudo %}
+{% extends "base.html" %} {% block conteudo %}
 
-<div class="experience-container"> 
-  
+<div class="experience-container">
   <div class="timeline">
     <div class="timeline-section">
       <h2 class="timeline-heading">Formação Acadêmica</h2>
-      
+
       {% for experiencia in experiencias %}
       <div class="timeline-card">
         <div class="timeline-card-header">
-          <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}" class="timeline-icon">
+          <img
+            src="{{ experiencia.imagem }}"
+            alt="{{ experiencia.alt }}"
+            class="timeline-icon"
+          />
           <div class="timeline-period">
-            {% if experiencia.alt == "cargo5" %}2023-Atual{% endif %}
-            {% if experiencia.alt == "cargo2" %}2022-2023{% endif %}
-            {% if experiencia.alt == "formacao" %}2001-2004{% endif %}
-            
+            {% if experiencia.alt == "cargo5" %}2023-Atual{% endif %} {% if
+            experiencia.alt == "cargo2" %}2022-2023{% endif %} {% if
+            experiencia.alt == "formacao" %}2001-2004{% endif %}
           </div>
         </div>
         <div class="timeline-content">
           <h3>{{ experiencia.titulo }}</h3>
           <p class="timeline-description">
-            {% if experiencia.alt == "cargo5" %}Cursando graduação tecnológica com foco no desenvolvimento de software para múltiplas plataformas, incluindo web, mobile e desktop.{% endif %}
-            {% if experiencia.alt == "cargo2" %}Especialização voltada para resolução de conflitos e mediação em ambientes profissionais.{% endif %}
-            {% if experiencia.alt == "formacao" %}Formação em Fisioterapia com ênfase em reabilitação neurofuncional.{% endif %}
+            {% if experiencia.alt == "cargo5" %}Cursando graduação tecnológica
+            com foco no desenvolvimento de software para múltiplas plataformas,
+            incluindo web, mobile e desktop.{% endif %} {% if experiencia.alt ==
+            "cargo2" %}Especialização voltada para resolução de conflitos e
+            mediação em ambientes profissionais.{% endif %} {% if
+            experiencia.alt == "formacao" %}Formação em Fisioterapia com ênfase
+            em reabilitação neurofuncional.{% endif %}
           </p>
         </div>
       </div>
@@ -32,23 +37,32 @@
 
     <div class="timeline-section">
       <h2 class="timeline-heading">Experiência Profissional</h2>
-      
+
       {% for experiencia in experiencias2 %}
       <div class="timeline-card">
         <div class="timeline-card-header">
-          <img src="{{ experiencia.imagem }}" alt="{{ experiencia.alt }}" class="timeline-icon">
+          <img
+            src="{{ experiencia.imagem }}"
+            alt="{{ experiencia.alt }}"
+            class="timeline-icon"
+          />
           <div class="timeline-period">
-            {% if experiencia.alt == "cargo3" %}2006-2007{% endif %}
-            {% if experiencia.alt == "cargo1" %}2007-2009{% endif %}
-            {% if experiencia.alt == "cargo4" %}2009-Atual{% endif %}
+            {% if experiencia.alt == "cargo3" %}2006-2007{% endif %} {% if
+            experiencia.alt == "cargo1" %}2007-2009{% endif %} {% if
+            experiencia.alt == "cargo4" %}2009-Atual{% endif %}
           </div>
         </div>
         <div class="timeline-content">
           <h3>{{ experiencia.titulo }}</h3>
           <p class="timeline-description">
-            {% if experiencia.alt == "cargo3" %}Atuação no atendimento ao cliente e operações bancárias, desenvolvendo habilidades de comunicação e organização.{% endif %}
-            {% if experiencia.alt == "cargo1" %}Responsável por auxiliar no andamento processual, redação de documentos legais e atendimento ao público.{% endif %}
-            {% if experiencia.alt == "cargo4" %}Atuando na gestão de processos judiciais, análise de documentos e suporte às atividades judiciais com foco na eficiência e precisão.{% endif %}
+            {% if experiencia.alt == "cargo3" %}Atuação no atendimento ao
+            cliente e operações bancárias, desenvolvendo habilidades de
+            comunicação e organização.{% endif %} {% if experiencia.alt ==
+            "cargo1" %}Responsável por auxiliar no andamento processual, redação
+            de documentos legais e atendimento ao público.{% endif %} {% if
+            experiencia.alt == "cargo4" %}Atuando na gestão de processos
+            judiciais, análise de documentos e suporte às atividades judiciais
+            com foco na eficiência e precisão.{% endif %}
           </p>
         </div>
       </div>

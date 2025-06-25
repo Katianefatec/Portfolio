@@ -590,8 +590,138 @@
 .mobile-tab-menu, .desktop-menu {
   display: none !important; /* Esconder ambos por padrão */
 }
+.container-contato {
+  padding: 120px 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-/* Regras específicas para desktop */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contato-info, .contato-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-item i {
+  font-size: 20px;
+  color: #4a90e2;
+  margin-right: 15px;
+  width: 25px;
+  text-align: center;
+}
+
+.social-links-contato {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilos do formulário */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2d3e50;
+  font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e9ed;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-enviar {
+  background-color: #2d3e50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #3a5269;
+}
+
+/* Status do formulário */
+#form-status {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#form-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+#form-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contato-info {
+    order: 2;
+  }
+  
+  .contato-form {
+    order: 1;
+  }
+  
+  .social-links-contato {
+    justify-content: flex-start;
+  }
+
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-tab-menu {
+    display: flex !important;
+  }
+}
+
+    /* Corrigir problema de ícones no desktop */
 @media screen and (min-width: 769px) {
   .desktop-menu {
     display: block !important;
@@ -604,22 +734,6 @@
 
 /* Regras específicas para mobile */
 @media screen and (max-width: 768px) {
-  .desktop-menu {
-    display: none !important;
-  }
-  
-  .mobile-tab-menu {
-    display: flex !important;
-  }
-}
-
-    /* Corrigir problema de ícones no desktop */
-    @media screen and (min-width: 769px) { 
-      .tab-item i {
-        display: none !important;
-      }
-    }
-    /* Media Queries */
     @media (max-width: 768px) {
       /* Alternar menus */
       .desktop-menu {

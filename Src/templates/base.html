@@ -1,81 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/normalize.css">
-    <link rel="stylesheet" href="../static/css/estilos.css">     
-    <link rel="stylesheet" href="../static/css/vercel.css?v=1.1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/estilos.css" />
+    <link rel="stylesheet" href="../static/css/vercel.css?v=1.1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <title>Katiane Soares | Desenvolvedora Full Stack</title>
-</head>
-<body>
-  <!-- Menu desktop -->
-  <div class="sidebar-container desktop-menu">
-    <nav id="sidebar">
-      <img src="../static/img/ks.png" alt="Logo">
-      <ul class="list-unstyled">
-        <li><a href="/" class="desktop-link">Home</a></li>
-        <li><a href="/experiencia" class="desktop-link">Experiência</a></li>
-        <li><a href="/projetos" class="desktop-link">Projetos</a></li>
-        <li><a href="https://github.com/Katianefatec" target="_blank" class="desktop-link">GitHub</a></li>
-      </ul>
-    </nav>
-  </div>
+  </head>
+  <body>
+    <!-- Menu desktop -->
+    <div class="sidebar-container desktop-menu">
+      <nav id="sidebar">
+        <img src="../static/img/ks.png" alt="Logo" />
+        <ul class="list-unstyled">
+          <li><a href="/" class="desktop-link">Home</a></li>
+          <li><a href="/experiencia" class="desktop-link">Experiência</a></li>
+          <li><a href="/projetos" class="desktop-link">Projetos</a></li>
+          <li><a href="/contato" class="desktop-link">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <!-- Conteúdo principal -->
-  <div class="content-wrapper">
-    {% block conteudo %}
-    {% endblock %}     
-  </div>
-  
-  <!-- Menu mobile em tabs -->
+    <!-- Conteúdo principal -->
+    <div class="content-wrapper">{% block conteudo %} {% endblock %}</div>
+
+    <!-- Menu mobile em tabs -->
     <nav class="mobile-tab-menu">
-    <a href="/" class="tab-item vercel-tab-item {% if request.path == '/' %}active{% endif %}">
-      <i class="fas fa-home vercel-icon"></i>
-      <span class="vercel-text">Home</span>
-    </a>
-    <a href="/experiencia" class="tab-item vercel-tab-item {% if request.path == '/experiencia' %}active{% endif %}">
-      <i class="fas fa-briefcase vercel-icon"></i>
-      <span class="vercel-text">Experiência</span>
-    </a>
-    <a href="/projetos" class="tab-item vercel-tab-item {% if request.path == '/projetos' %}active{% endif %}">
-      <i class="fas fa-code vercel-icon"></i>
-      <span class="vercel-text">Projetos</span>
-    </a>
-    <a href="https://github.com/Katianefatec" class="tab-item vercel-tab-item" target="_blank">
-      <i class="fab fa-github vercel-icon"></i>
-      <span class="vercel-text">GitHub</span>
-    </a>
-  </nav>
+      <a
+        href="/"
+        class="tab-item vercel-tab-item {% if request.path == '/' %}active{% endif %}"
+      >
+        <i class="fas fa-home vercel-icon"></i>
+        <span class="vercel-text">Home</span>
+      </a>
+      <a
+        href="/experiencia"
+        class="tab-item vercel-tab-item {% if request.path == '/experiencia' %}active{% endif %}"
+      >
+        <i class="fas fa-briefcase vercel-icon"></i>
+        <span class="vercel-text">Experiência</span>
+      </a>
+      <a
+        href="/projetos"
+        class="tab-item vercel-tab-item {% if request.path == '/projetos' %}active{% endif %}"
+      >
+        <i class="fas fa-code vercel-icon"></i>
+        <span class="vercel-text">Projetos</span>
+      </a>
+      <a
+        href="https://github.com/Katianefatec"
+        class="tab-item vercel-tab-item"
+        target="_blank"
+      >
+        <i class="fab fa-github vercel-icon"></i>
+        <span class="vercel-text">GitHub</span>
+      </a>
+    </nav>
 
-  <footer>
-    <div class="name">
-      <p>Desenvolvido por Katiane Soares - 2023</p>
-    </div>
-    <div class="img-footer">
-      <a href="https://github.com/Katianefatec" target="_blank"></a>
-    </div>
-  </footer>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
+    <footer>
+      <div class="name">
+        <p>Desenvolvido por Katiane Soares - 2023</p>
+      </div>
+      <div class="img-footer">
+        <a href="https://github.com/Katianefatec" target="_blank"></a>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
       // Script específico para resolver problemas no Vercel e em desenvolvimento
-      (function() {
+      (function () {
         // Função para detectar ambiente Vercel
         function isVercelEnv() {
-          return window.location.hostname.includes('vercel') || 
-                 window.location.hostname.includes('.app') ||
-                 window.location.hostname !== 'localhost';
+          return (
+            window.location.hostname.includes("vercel") ||
+            window.location.hostname.includes(".app") ||
+            window.location.hostname !== "localhost"
+          );
         }
-        
+
         // Aplicar estilos inline para resolver problema no Vercel
         function applyVercelFix() {
           if (isVercelEnv()) {
-            var style = document.createElement('style');
+            var style = document.createElement("style");
             style.innerHTML = `
               @media (max-width: 768px) {
                 .mobile-tab-menu {
@@ -109,30 +130,30 @@
             document.head.appendChild(style);
           }
         }
-    
+
         // Função para ajustar menus
         function adjustMenus() {
           const isMobile = window.innerWidth <= 768;
-          
-          const desktopMenu = document.querySelector('.desktop-menu');
-          const mobileMenu = document.querySelector('.mobile-tab-menu');
-          
+
+          const desktopMenu = document.querySelector(".desktop-menu");
+          const mobileMenu = document.querySelector(".mobile-tab-menu");
+
           if (desktopMenu && mobileMenu) {
             // Forçar exibição correta
-            desktopMenu.style.display = isMobile ? 'none' : 'block';
-            mobileMenu.style.display = isMobile ? 'flex' : 'none';
-            
+            desktopMenu.style.display = isMobile ? "none" : "block";
+            mobileMenu.style.display = isMobile ? "flex" : "none";
+
             // Ajustes de estilo para mobile
             if (isMobile) {
-              mobileMenu.style.justifyContent = 'space-around';
-              mobileMenu.style.alignItems = 'center';
+              mobileMenu.style.justifyContent = "space-around";
+              mobileMenu.style.alignItems = "center";
             }
           }
         }
-        
+
         // Executar assim que possível
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', function() {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", function () {
             applyVercelFix();
             adjustMenus();
           });
@@ -140,10 +161,10 @@
           applyVercelFix();
           adjustMenus();
         }
-        
+
         // Executar ao redimensionar
-        window.addEventListener('resize', adjustMenus);
+        window.addEventListener("resize", adjustMenus);
       })();
     </script>
-</body>
+  </body>
 </html>
