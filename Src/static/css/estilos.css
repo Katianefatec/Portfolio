@@ -1,4 +1,4 @@
-    /* Estilos gerais e base */
+/* Estilos gerais e base */
     body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(180deg, rgba(15, 62, 82, 0.1), rgba(96, 167, 197, 0.05) 100%);
@@ -194,12 +194,7 @@
       margin: 20px 0;
     }
     
-    .about-image {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+    /* Updated about-image to work with new layout */
     
     .interests-section {
       padding: 50px 0;
@@ -739,6 +734,66 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* About Section Styles */
+.about-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-image {
+  flex: 0 0 300px;
+}
+
+.intro-image .about-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.journey-section-watermark {
+  position: relative;
+  margin: 40px 0;
+  min-height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-image: url('../img/caminhada500.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.journey-text-overlay {
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 40px;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(0.5px);
+}
+
+.journey-text-overlay p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  /* color: #1a2732; */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.journey-text-overlay strong {
+  /* color: #2d3e50; */
+  font-size: 1.2rem;
+}
+
 /* Media queries para responsividade */
 @media (max-width: 768px) {
   .contato-grid {
@@ -763,6 +818,29 @@
   
   .mobile-tab-menu {
     display: flex !important;
+  }
+
+  .journey-section-watermark {
+    min-height: 400px;
+  }
+
+  .journey-text-overlay {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(0.5px);
+  }
+
+  .journey-text-overlay p {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    flex-direction: column;
+  }
+
+  .intro-image {
+    flex: none;
+    margin-top: 20px;
   }
 }
 
@@ -878,4 +956,3 @@
       }
 
     }
-  
