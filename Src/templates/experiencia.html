@@ -1,9 +1,13 @@
 {% extends "base.html" %} {% block conteudo %}
 
 <div class="experience-container">
+  
   <div class="timeline">
     <div class="timeline-section">
-      <h2 class="timeline-heading">Formação Acadêmica</h2>
+      <h2 class="timeline-heading">
+        <i class="fas fa-graduation-cap"></i>
+        Formação Acadêmica
+      </h2>
 
       {% for experiencia in experiencias %}
       <div class="timeline-card">
@@ -36,7 +40,10 @@
     </div>
 
     <div class="timeline-section">
-      <h2 class="timeline-heading">Experiência Profissional</h2>
+      <h2 class="timeline-heading">
+        <i class="fas fa-briefcase"></i>
+        Experiência Profissional
+      </h2>
 
       {% for experiencia in experiencias2 %}
       <div class="timeline-card">

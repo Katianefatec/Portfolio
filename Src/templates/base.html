@@ -62,20 +62,25 @@
         <span class="vercel-text">Projetos</span>
       </a>
       <a
-        href="https://github.com/Katianefatec"
-        class="tab-item vercel-tab-item"
-        target="_blank"
+        href="/contato"
+        class="tab-item vercel-tab-item {% if request.path == '/contato' %}active{% endif %}"
       >
-        <i class="fab fa-github vercel-icon"></i>
-        <span class="vercel-text">GitHub</span>
+        <i class="fas fa-envelope vercel-icon"></i>
+        <span class="vercel-text">Contato</span>
       </a>
     </nav>
 
     <footer class="footer">
-      <p>© 2025 Katiane Soares | Desenvolvedora Full Stack</p>
-      <div class="social-links">
-        <a href="https://github.com/Katianefatec" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/katiane-soares-4b8193245/" target="_blank">LinkedIn</a>
+      <div class="footer-content">
+        <p>© 2025 Katiane Soares | Desenvolvedora Full Stack</p>
+        <div class="social-links">
+          <a href="https://github.com/Katianefatec" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/katiane-soares-4b8193245/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
       </div>
     </footer>
 

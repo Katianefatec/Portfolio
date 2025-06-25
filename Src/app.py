@@ -77,7 +77,7 @@ def experiencia():
         {
             "imagem": "../static/img/fatec.jpeg",
             "alt": "cargo5",
-            "titulo": "Cursando Desenvolvimento de Software Multiplataforma",
+            "titulo": "Cursando Desenvolvimento de Software Multiplataforma na FATEC São José dos Campos (2023-2025)",
         },
         {
             "imagem": "../static/img/faculeste.jpeg",
